@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 96px;
+  font-family: "Poppins", sans-serif;
+  color: #171717;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: min(1180px, calc(100% - 40px));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-50%);
+  padding: 12px 22px;
+  background: rgba(250, 248, 244, 0.92);
+  border: 1px solid rgba(23, 23, 23, 0.1);
+  box-shadow: 0 12px 30px rgba(23, 23, 23, 0.08);
+  backdrop-filter: blur(16px);
+  z-index: 1000;
+  border-radius: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar nav a {
+  position: relative;
+  text-decoration: none;
+  color: #46433e;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #d85d32;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: #d85d32;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar > div i {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar > div i:hover {
+  color: #fff;
+  background: #171717;
+  transform: translateY(-2px);
+}
+
+.navbar > div a {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-top: 82px;
+  }
+
+  .navbar {
+    width: calc(100% - 24px);
+    padding: 10px 14px;
+    border-radius: 14px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar nav ul {
+    gap: 12px;
+  }
+
+  .navbar nav a {
+    font-size: 0.62rem;
+    letter-spacing: 0.03em;
+  }
+
+  .navbar > div {
+    gap: 0;
+  }
+
+  .navbar > div i {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar nav {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+}

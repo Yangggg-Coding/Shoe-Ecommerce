@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Style/navbar.css" />
+    <link rel="stylesheet" href="../Style/footer.css" />
+    <link rel="stylesheet" href="../Style/checkout.css" />
+    <link rel="icon" href="../Image/LogoPagee.jpg" type="image/png" />
+    <title>Checkout | Sneaker Step</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="Home.html" class="logo">
+        <img src="../Image/LogoPagee.jpg" alt="LogoPage" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Collabs</a></li>
+          <li><a href="#">Brands</a></li>
+        </ul>
+      </nav>
+      <div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <a href="CheckOut.html"> <i class="fa-solid fa-cart-arrow-down"></i></a>
+      </div>
+    </header>
+
+    <main class="checkout-page">
+      <div class="checkout-heading">
+        <a class="back-link" href="Allproduct.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          Continue shopping
+        </a>
+        <div class="secure-note">
+          <i class="fa-solid fa-lock"></i>
+          Secure checkout
+        </div>
+      </div>
+
+      <div class="checkout-layout">
+        <section class="checkout-form" aria-labelledby="checkout-title">
+          <div class="section-intro">
+            <p class="eyebrow">Almost yours</p>
+            <h1 id="checkout-title">Finish your order.</h1>
+            <p>Complete your details and we will get your new pair moving.</p>
+          </div>
+
+          <form id="checkout-form">
+            <fieldset>
+              <legend><span>01</span> Contact details</legend>
+              <div class="field-row">
+                <label>
+                  Email address
+                  <input type="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                  Phone number
+                  <input type="tel" placeholder="+1 555 000 0000" required />
+                </label>
+              </div>
+              <label class="check-line">
+                <input type="checkbox" />
+                <span>Email me with news and exclusive drops</span>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend><span>02</span> Shipping address</legend>
+              <div class="field-row">
+                <label>
+                  First name
+                  <input type="text" placeholder="Alex" required />
+                </label>
+                <label>
+                  Last name
+                  <input type="text" placeholder="Morgan" required />
+                </label>
+              </div>
+              <label>
+                Address
+                <input
+                  type="text"
+                  placeholder="Street and house number"
+                  required
+                />
+              </label>
+              <div class="field-row three-columns">
+                <label>
+                  City
+                  <input type="text" placeholder="New York" required />
+                </label>
+                <label>
+                  State
+                  <select required>
+                    <option value="">Select</option>
+                    <option>New York</option>
+                    <option>California</option>
+                    <option>Texas</option>
+                    <option>Florida</option>
+                  </select>
+                </label>
+                <label>
+                  ZIP code
+                  <input type="text" placeholder="10001" required />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span>03</span> Payment</legend>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="card" checked />
+                  <i class="fa-regular fa-credit-card"></i>
+                  <span>Card</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="paypal" />
+                  <i class="fa-brands fa-paypal"></i>
+                  <span>PayPal</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="apple" />
+                  <i class="fa-brands fa-apple-pay"></i>
+                  <span>Apple Pay</span>
+                </label>
+              </div>
+              <div class="field-row">
+                <label>
+                  Card number
+                  <div class="input-icon">
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="1234 5678 9012 3456"
+                      required
+                    />
+                    <i class="fa-regular fa-credit-card"></i>
+                  </div>
+                </label>
+                <label>
+                  Name on card
+                  <input type="text" placeholder="Alex Morgan" required />
+                </label>
+              </div>
+              <div class="field-row compact-row">
+                <label>
+                  Expiry date
+                  <input type="text" placeholder="MM / YY" required />
+                </label>
+                <label>
+                  Security code
+                  <div class="input-icon">
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="CVC"
+                      required
+                    />
+                    <i class="fa-regular fa-circle-question"></i>
+                  </div>
+                </label>
+              </div>
+            </fieldset>
+
+            <button class="place-order" type="submit">
+              Place order <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <p class="terms">
+              By placing your order, you agree to our terms and privacy policy.
+            </p>
+          </form>
+        </section>
+
+        <aside class="order-summary" aria-labelledby="summary-title">
+          <div class="summary-topline">
+            <p class="eyebrow">Your selection</p>
+            <span class="js-item-count"></span>
+          </div>
+          <h2 id="summary-title">Order summary</h2>
+          <div id="js-cart-item"></div>
+
+          <!--    <div class="cart-item" data-price="89">
+            <div class="product-image">
+              <img
+                src="../Image/Nike/nike1.jpg"
+                alt="Nike Air sneaker in white"
+              />
+            </div>
+            <div class="product-info">
+              <div>
+                <h3>Air Max Pulse</h3>
+                <p>White / Silver &nbsp; · &nbsp; Size 41</p>
+              </div>
+              <strong>$89</strong>
+              <div class="quantity-control">
+                <button
+                  type="button"
+                  class="quantity-button"
+                  aria-label="Decrease quantity"
+                >
+                  −
+                </button>
+                <span class="quantity">1</span>
+                <button
+                  type="button"
+                  class="quantity-button"
+                  aria-label="Increase quantity"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="promo-code">
+            <input id="promo-input" type="text" placeholder="Promo code" />
+            <button id="promo-button" type="button">Apply</button>
+          </div>
+          <p class="promo-message" id="promo-message" aria-live="polite"></p>
+
+          <div id="js-calculate">
+            <div class="summary-lines">
+              <div>
+                <span>Subtotal</span
+                ><strong id="subtotal" class="js-subtotal"> </strong>
+              </div>
+              <div><span>Shipping</span><strong>Free</strong></div>
+              <div>
+                <span>Estimated tax</span
+                ><strong id="tax" class="js-fee"></strong>
+              </div>
+            </div>
+            <div class="total-line">
+              <span>Total</span><strong id="total" class="js-total"></strong>
+            </div>
+          </div>
+
+          <div class="delivery-note">
+            <i class="fa-solid fa-truck-fast"></i>
+            <div>
+              <strong>Free express delivery</strong
+              ><span>Arrives in 2–4 business days</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <div class="logo">
+            <img src="../Image/LogoPagee.jpg" alt="Logo" />
+            <div>
+              <h3>SNEAKER STEP</h3>
+              <p>MOVE AHEAD</p>
+            </div>
+          </div>
+
+          <p class="footer-description">
+            Premium sneakers for sport and everyday life. Technology, comfort
+            and style in every step.
+          </p>
+
+          <div class="social-icons">
+            <img src="../Image/telegram.png" alt="" />
+            <img src="../Image/instagram.png" alt="" />
+            <img src="../Image/youtube.png" alt="" />
+            <img src="../Image/facebook.png" alt="" />
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>CATALOG</h4>
+
+            <a href="#">Running</a>
+            <a href="#">Basketball</a>
+            <a href="#">Football</a>
+            <a href="#">Training</a>
+            <a href="#">Lifestyle</a>
+          </div>
+
+          <div>
+            <h4>CUSTOMER</h4>
+
+            <a href="#">Track Order</a>
+            <a href="#">Returns & Refunds</a>
+            <a href="#">Size Guide</a>
+            <a href="#">Membership</a>
+            <a href="#">Gift Cards</a>
+          </div>
+
+          <div>
+            <h4>COMPANY</h4>
+
+            <a href="#">About Us</a>
+            <a href="#">Technology</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact Us</a>
+          </div>
+
+          <div>
+            <h4>CONTACTS</h4>
+
+            <p>+1 (800) 123-4567</p>
+            <p>info@aerostep.com</p>
+            <p>123 Move St, New York, NY 10001, USA</p>
+            <p>Mon - Sun: 9:00 AM - 9:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="module" src="/Script/checkout.js"></script>
+</html>
