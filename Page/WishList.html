@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../Style/allprodouct.css" />
+    <link rel="stylesheet" href="../Style/wishlist.css" />
     <link rel="stylesheet" href="../Style/navbar.css" />
     <link rel="stylesheet" href="../Style/footer.css" />
     <link rel="icon" href="../Image/LogoPagee.jpg" type="image/png" />
@@ -22,19 +23,20 @@
       <a href="index.html" class="logo">
         <img src="../Image/LogoPagee.jpg" alt="LogoPage" />
       </a>
-      <h2>All Products</h2>
+      <h2>Wishlist</h2>
       <div>
-        <a href="WishList.html"><i class="fa-regular fa-heart"></i></a>
-        <a href="CheckOut.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
+        <i class="fa-regular fa-heart"></i>
+        <a href="CheckOut.html"> <i class="fa-solid fa-cart-arrow-down"></i></a>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="under-nav">
-          <p><span>Home</span><i class="fa-solid fa-angle-right"></i>Shoes</p>
+      <section class="wishlist-page">
+        <div class="wishlist-heading">
+          <p>Saved for later</p>
+          <h1>Your favorites</h1>
         </div>
-        <div class="hero-grid heroGrid"></div>
+        <div id="js-wishlish"></div>
       </section>
     </main>
 
@@ -104,6 +106,6 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="/Script/products.js"></script>
   </body>
+  <script type="module" src="/Script/wishlish.js"></script>
 </html>

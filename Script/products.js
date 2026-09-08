@@ -11,7 +11,7 @@ function displayAllProduct() {
           data-product-id="${shoe.Id}"
       >        
         <img src="${shoe.Image}" alt="${shoe.Name}" />
-        <i class="fa-regular fa-heart product-heart" title="Add to wishlist"></i>
+        <i data-product-id="${shoe.Id}" class="fa-regular fa-heart product-heart js-product-heart"title="Add to wishlist" ></i>
         <h4>${shoe.Name}</h4>  
         <span>1 Color</span>
       </div> 
@@ -44,3 +44,16 @@ export function addtocart() {
     });
   });
 }
+
+const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+document.querySelectorAll(".js-product-heart").forEach((heart) => {
+  heart.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const productId = Number(heart.dataset.productId);
+    if (!wishlist.includes(productId)) {
+      wishlist.push(productId);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    }
+  });
+});

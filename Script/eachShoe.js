@@ -81,7 +81,7 @@ function eachShoeCheck() {
         <!-- Shoe information -->
         <section>
           <div>
-            <h1>Air Jordan 1</h1>
+            <h1>${eachProduct.Name}</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, aut.
             </p>
@@ -108,8 +108,8 @@ function eachShoeCheck() {
             <img src="/Image/star.png" alt="" />
             <img src="/Image/star.png" alt="" />
             <img src="/Image/star.png" alt="" />
-            <h5>Air Jordan</h5>
-            <p>$99</p>
+            <h5>${eachProduct.Name}</h5>
+            <p>$${eachProduct.price}</p>
           </div>
         </section>
       </div>
