@@ -90,3 +90,35 @@
   color: #000;
   padding-left: 5px;
 }
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 48px 24px;
+  }
+
+  .footer-container {
+    gap: 40px;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer {
+    padding: 40px 18px;
+  }
+
+  .footer-logo {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 22px;
+  }
+}
