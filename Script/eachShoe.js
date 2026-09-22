@@ -103,11 +103,11 @@ function eachShoeCheck() {
           <h4>Yoy might also like</h4>
           <div>
             <img src="${eachProduct.Image}" alt="${eachProduct.Name}" />
-            <img src="/Image/star.png" alt="" />
-            <img src="/Image/star.png" alt="" />
-            <img src="/Image/star.png" alt="" />
-            <img src="/Image/star.png" alt="" />
-            <img src="/Image/star.png" alt="" />
+            <img src="../Image/star.png" alt="" />
+            <img src="../Image/star.png" alt="" />
+            <img src="../Image/star.png" alt="" />
+            <img src="../Image/star.png" alt="" />
+            <img src="../Image/star.png" alt="" />
             <h5>${eachProduct.Name}</h5>
             <p>$${eachProduct.price}</p>
           </div>
