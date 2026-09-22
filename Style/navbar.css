@@ -154,4 +154,26 @@ body {
   .navbar {
     justify-content: space-between;
   }
+
+  .navbar h2 {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    width: calc(100% - 16px);
+    padding: 10px 12px;
+  }
+
+  .logo img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .navbar h2 {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
 }

@@ -180,6 +180,7 @@ main {
 
   .hero-grid {
     gap: 26px 12px;
+    grid-template-columns: 1fr;
   }
 
   .hero-text h4 {
@@ -196,5 +197,16 @@ main {
 
   .price button {
     width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .under-nav p {
+    font-size: 0.68rem;
+    gap: 6px;
+  }
+
+  .hero::before {
+    font-size: 2.1rem;
   }
 }
